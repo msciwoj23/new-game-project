@@ -7,15 +7,17 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
     <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/click_effect.js') }}" defer></script>
 </head>
-<body>
+<body onload="click_effect.add_all_events()">
     <h1>Start page</h1>
+    <span>Player </span><span id='player'>x</span><span> turn</span>
 
     <div id='mainTable'>
         <table>
-            <tr><td>E</td><td>E</td><td>E</td></tr>
-            <tr><td>E</td><td>E</td><td>E</td></tr>
-            <tr><td>E</td><td>E</td><td>E</td></tr>
+            <tr><td><div id='1'>E</div></td><td><div id='2'>E</div></td><td><div id='3'>E</div></td></tr>
+            <tr><td><div id='4'>E</div></td><td><div id='5'>E</div></td><td><div id='6'>E</div></td></tr>
+            <tr><td><div id='7'>E</div></td><td><div id='8'>E</div></td><td><div id='9'>E</div></td></tr>
         </table>
     </div>
 </body>

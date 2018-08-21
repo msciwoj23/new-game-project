@@ -9,9 +9,6 @@ h1 {
     top: 100px;
     width: 150px;
     height: 150px;
-    font-size: 30px;
-}
-
-#mainTable table h6 {
-    text-align: center
+    font-size: 80px;
+    text-align: center;
 }

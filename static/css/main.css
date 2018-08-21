@@ -6,8 +6,12 @@ h1 {
     background-color: cornflowerblue;
     position: relative;
     left: 40%;
-    top: 200px;
-    width: 200px;
-    height: 200px;
+    top: 100px;
+    width: 150px;
+    height: 150px;
     font-size: 30px;
+}
+
+#mainTable table h6 {
+    text-align: center
 }

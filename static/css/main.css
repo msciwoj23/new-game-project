@@ -1,3 +1,13 @@
 h1 {
     background-color: blueviolet;
 }
+
+#mainTable table td {
+    background-color: cornflowerblue;
+    position: relative;
+    left: 40%;
+    top: 200px;
+    width: 200px;
+    height: 200px;
+    font-size: 30px;
+}

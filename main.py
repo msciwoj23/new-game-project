@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def main():
-    return 'Start page'
+    return render_template('display.html')
 
 
 def main():

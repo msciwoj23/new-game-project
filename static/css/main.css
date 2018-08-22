@@ -37,14 +37,18 @@ h1 {
     color: brown;
 }
 
-.field {
-    background-color: rgb(235, 127, 94);
-    position: absolute;
+
+* {
+    box-sizing: border-box;
+}
+.backBrick {
+    background-color: rgb(229, 160, 138);
+    position: relative;
     z-index: 2;
     top: 10%;
-    left: 30%;
-    width: 400px;
-    height: 400px;
+    width: 100px;
+    height: 100px;
+    float: left;
 }
 
 .bottomShadow {
@@ -61,14 +65,14 @@ h1 {
 }
 
 .tileBody {
-    background-color: rgb(159, 145, 250);
+    background-color: rgb(154, 221, 240);
     position: absolute;
     z-index: 3;
     left: 5%;
     top: 5%;
     width: 90%;
     height: 90%;
-    border-radius: 2%;
+    border-radius: 6%;
 
 }
 

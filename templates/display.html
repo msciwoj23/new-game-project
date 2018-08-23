@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tic Tac Toe</title>
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/water.css') }}">
     <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/tilesGenerator.js') }}" defer></script>
 </head>
 
 <body>
@@ -25,21 +28,19 @@
             </tr>
         </table>
     </div> -->
-<div class="titleDiv">
-    dfhdfhsdhsdh
-</div>
-{% for it in range(10) %}
-<div>
-    {% for i in range(12) %}
-    <div class="backBrick">
-        <div class="tileBody">
-            <div class="upperGlow"></div>
-        </div>
-        <div class="bottomShadow"></div>
+    <div class="titleDiv">
+        Tic Tac Toe?
     </div>
-    {% endfor %}
-</div>
-{% endfor %}
+    <div id="toInsertTiles">
+        <div id='1' class="brickField">
+            <div class="tileBody">
+                <div class="upperGlow"></div>
+            </div>
+            <div class="bottomShadow"></div>
+        </div>
+    </div>
+
+
 
 
 

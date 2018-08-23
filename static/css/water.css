@@ -1,0 +1,26 @@
+
+.bathTub, .bathTubRim, .water {
+  position: absolute;
+  z-index: 6;
+  width: 99%;
+}
+
+
+.bathTub {
+  background-color: rgb(255, 255, 255);
+  height: 2%;
+  top: 77%;
+}
+
+.bathTubRim {
+  background-color: rgb(187, 255, 231);
+  height: 1%;
+  top: 79%;
+}
+
+.water {
+  background-image: linear-gradient(blue,
+   rgb(137, 255, 218) );
+  height: 20%;
+  top: 80%;
+}

@@ -1,15 +1,8 @@
 
-* {
-    box-sizing: border-box;
-}
-
-/* .titleDiv {
-    position: absolute;
-    z-index: 5;
-    font-size: 60px;
-    left:10%;
-    top: 10%;
+/* * {
+    box-sizing: margin-box;
 } */
+
 
 .titleDiv { 
     position: absolute;
@@ -25,9 +18,6 @@
     text-align: center; 
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.394); 
 }
-
-
-
 
 body, .brickField {
     background-color: rgb(243, 154, 113);

@@ -1,6 +1,8 @@
 import json
 from flask import Flask, render_template, request, session
 from flask_socketio import SocketIO, emit
+import data_manager
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
@@ -17,8 +19,12 @@ def test_message(message):
 
 @socketio.on('field1', namespace='/test')
 def test_message(message):
-    print(message)
-    emit('my response', {'data': message['data']})
+    print(message['data'])
+    field_id=int(message['id'])
+    player=message['data']
+    data_manager.change_field(player, field_id)
+    print(data_manager.refresh())
+    emit('field'+message['id'], {'data': data_manager.refresh()})
 
 @socketio.on('my broadcast event', namespace='/test')
 def test_message(message):

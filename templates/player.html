@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.5/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/click_effect.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/ajax.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/socket.js') }}" defer></script>
+</head>
+<body onload="click_effect.add_all_events()">
+<!-- <body> -->
+
+<form method="post" action="/player">
+    <input type="text" hidden name="playero" id="playerx" placeholder="x">
+    <input type="submit" onclick='click_effect.new_game()' value=" Be player x" />
+</form>
+<form method="post" action="/player">
+    <input type="text" hidden name="playero" id="playero" placeholder="o">
+    <input type="submit" value=" Be player o" />
+</form>
+
+</body>
+</html>

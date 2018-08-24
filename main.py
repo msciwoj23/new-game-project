@@ -11,11 +11,36 @@ socketio = SocketIO(app)
 
 @app.route("/")
 def main():
+    return render_template('index.html')
+
+@app.route("/player")
+def player():
+    print('dupa')
+    return render_template('player.html')
+
+@app.route("/player", methods=['POST'])
+def start_game():
+    print('test')
+    print(request.form['playerx'])
+    print(request.form['playero'])
+    
+    playerx =request.form['playerx']
+    playery =request.form['playero']
+
+    return redirect("/game")
+
+@app.route("/game")
+def play():
     return render_template('display.html')
 
 @socketio.on('my event', namespace='/test')
 def test_message(message):
     emit('my response', {'data': message['data']})
+
+@socketio.on('new_game', namespace='/test')
+def new_game(message):
+    data_manager.reset()
+
 
 @socketio.on('field1', namespace='/test')
 def test_message(message):
